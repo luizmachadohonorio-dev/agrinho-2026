@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Agrofloresta | Sistemas Agroflorestais (SAF)</title>
+  <meta name="description" content="Descubra o poder da agrofloresta: biodiversidade, regeneração natural e colheitas abundantes. Um sistema inovador que une produtividade e ecologia.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* reset e base - CSS será separado em style.css no arquivo final, porém aqui para demonstração estruturada */
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+  <!-- Cursor customizado -->
+  <div class="custom-cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Chatbot flutuante -->
+  <div class="chatbot-float" id="chatbotBtn">
+    <i class="fas fa-robot"></i>
+    <span>IA Agro</span>
+  </div>
+  <div class="chatbot-panel" id="chatbotPanel">
+    <div class="chatbot-header">
+      <h3>🌱 Assistente Agroflorestal</h3>
+      <button id="closeChat"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chatbot-messages" id="chatMessages">
+      <div class="msg bot">Olá! Sou sua IA de recomendações. Pergunte sobre SAF, espécies, benefícios ou dê um like para personalizar 🌿</div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="chatInput" placeholder="Ex: vantagens da agrofloresta...">
+      <button id="sendChat"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <!-- Menu hamburger + nav sidebar -->
+  <div class="menu-toggle" id="menuToggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <nav class="sidebar-nav" id="sidebarNav">
+    <div class="nav-header">
+      <span class="logo">🌳 SAF</span>
+      <button id="closeNav"><i class="fas fa-arrow-left"></i></button>
+    </div>
+    <ul>
+      <li><a href="#hero">Início</a></li>
+      <li><a href="#pilares">Pilares</a></li>
+      <li><a href="#comparativo">Comparativo</a></li>
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#cultivos">Cultivos</a></li>
+      <li><a href="#conceito-chave">Conceito</a></li>
+      <li><a href="#ia-insights">IA Insights</a></li>
+    </ul>
+    <div class="theme-switch-wrapper">
+      <span><i class="fas fa-sun"></i></span>
+      <label class="theme-switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+      <span><i class="fas fa-moon"></i></span>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section impactante -->
+    <section id="hero" class="hero-section">
+      <div class="hero-glass-card">
+        <div class="hero-badge">Sistemas Agroflorestais • 2025</div>
+        <h1 class="hero-title">Cultive como a <span class="gradient-text">natureza</span> pensa</h1>
+        <p class="hero-sub">Agrofloresta: biodiversidade produtiva, solos vivos e colheita o ano todo. Transição do monocultivo para o <strong>ecossistema inteligente</strong>.</p>
+        <div class="hero-buttons">
+          <a href="#pilares" class="btn-primary">Explorar Pilares <i class="fas fa-arrow-right"></i></a>
+          <a href="https://www.embrapa.br/codigo-florestal/sistemas-agroflorestais-safs" target="_blank" class="btn-secondary">Embrapa SAF <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+      <div class="particles-bg" id="particles"></div>
+    </section>
+
+    <!-- Seção Pilares de Funcionamento -->
+    <section id="pilares" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Fundamentos</span>
+          <h2>⚙️ Pilares de Funcionamento</h2>
+          <p>Estratificação, sucessão natural e manejo de biomassa: a tríade da agrofloresta regenerativa</p>
+        </div>
+        <div class="cards-grid">
+          <div class="card-3d">
+            <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Estratificação</h3>
+            <p>Ocupação do espaço em diferentes alturas (rasteiras, arbustos, árvores altas) para captar máximo de sol e otimizar recursos.</p>
+          </div>
+          <div class="card-3d">
+            <div class="card-icon"><i class="fas fa-seedling"></i></div>
+            <h3>Sucessão Natural</h3>
+            <p>Espécies de ciclo curto (hortaliças) preparam o terreno para espécies de ciclo longo (madeira e frutas), imitando a sucessão ecológica.</p>
+          </div>
+          <div class="card-3d">
+            <div class="card-icon"><i class="fas fa-cut"></i></div>
+            <h3>Poda (Biomassa)</h3>
+            <p>Cobrir o solo com galhos e folhas como adubo verde, mantendo umidade e alimentando a vida microbiana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabela comparativa -->
+    <section id="comparativo" class="section alt-bg">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Comparação</span>
+          <h2>📊 Convencional vs. Agrofloresta</h2>
+          <p>Uma revolução silenciosa no campo: dados e características</p>
+        </div>
+        <div class="table-responsive">
+          <table class="compare-table">
+            <thead>
+              <tr><th>Característica</th><th>Agricultura Convencional</th><th>Agrofloresta (SAF)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Diversidade</td><td>Monocultura (apenas uma espécie)</td><td class="highlight">Policultivo (dezenas de espécies)</td></tr>
+              <tr><td>Solo</td><td>Exposto e dependente de químicos</td><td class="highlight">Protegido e adubado por matéria orgânica</td></tr>
+              <tr><td>Água</td><td>Alta dependência de irrigação</td><td class="highlight">Retenção natural de umidade no solo</td></tr>
+              <tr><td>Pragas</td><td>Combate com agrotóxicos</td><td class="highlight">Equilíbrio natural por biodiversidade</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefícios (cards + infográfico simples) -->
+    <section id="beneficios" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Vantagens</span>
+          <h2>🌿 Benefícios Integrais</h2>
+          <p>Ambientais, econômicos e sociais — o tripé da sustentabilidade</p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card"><i class="fas fa-water"></i><h4>Ambientais</h4><p>Recupera nascentes, sequestra carbono, protege fauna local.</p></div>
+          <div class="benefit-card"><i class="fas fa-chart-line"></i><h4>Econômicos</h4><p>Colheitas o ano todo, diversificação de renda, baixíssimo gasto com fertilizantes.</p></div>
+          <div class="benefit-card"><i class="fas fa-heartbeat"></i><h4>Sociais</h4><p>Alimentos nutritivos, saudáveis (livres de veneno), fortalecimento comunitário.</p></div>
+        </div>
+        <div class="info-graphic">
+          <div class="stat-item"><span class="stat-number">+200%</span><span>Biodiversidade</span></div>
+          <div class="stat-item"><span class="stat-number">-70%</span><span>Uso de água</span></div>
+          <div class="stat-item"><span class="stat-number">0</span><span>Agrotóxicos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exemplos de Cultivo (accordion + timeline) -->
+    <section id="cultivos" class="section alt-bg">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">O que plantar?</span>
+          <h2>🌾 Ciclos de Cultivo</h2>
+        </div>
+        <div class="accordion-wrapper">
+          <div class="accordion-item">
+            <div class="accordion-header"><span>Ciclo Curto (0-6 meses)</span><i class="fas fa-chevron-down"></i></div>
+            <div class="accordion-content"><p>Alface, rabanete, milho, feijão. Rápida colheita e adubação verde para o sistema.</p></div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header"><span>Ciclo Médio (1-3 anos)</span><i class="fas fa-chevron-down"></i></div>
+            <div class="accordion-content"><p>Banana, mamão, abacaxi, café, cacau – geração de renda contínua.</p></div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header"><span>Ciclo Longo (10+ anos)</span><i class="fas fa-chevron-down"></i></div>
+            <div class="accordion-content"><p>Castanhas, mogno, jacarandá, árvores frutíferas de grande porte. Legado florestal.</p></div>
+          </div>
+        </div>
+        <div class="timeline-mini">
+          <div class="timeline-node"><span>0-6m</span><div class="timeline-bar short"></div></div>
+          <div class="timeline-node"><span>1-3a</span><div class="timeline-bar medium"></div></div>
+          <div class="timeline-node"><span>10a+</span><div class="timeline-bar long"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conceito Chave + frase inspiradora -->
+    <section id="conceito-chave" class="section quote-section">
+      <div class="glass-quote">
+        <i class="fas fa-hand-peace quote-icon"></i>
+        <p>Na agrofloresta, o agricultor não é um "lutador" contra a natureza, mas um maestro que organiza o crescimento das plantas para que elas se ajudem mutuamente.</p>
+        <span>— Conceito chave dos Sistemas Agroflorestais</span>
+      </div>
+    </section>
+
+    <!-- IA Insights / Recomendação personalizada -->
+    <section id="ia-insights" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">IA + Agroecologia</span>
+          <h2>🤖 Recomendação Inteligente</h2>
+          <p>Toque no card e receba uma sugestão personalizada de espécies com base no seu bioma e objetivo</p>
+        </div>
+        <div class="ia-card" id="recommendCard">
+          <div class="ia-card-inner">
+            <i class="fas fa-microchip"></i>
+            <h3>Assistente de Cultivo</h3>
+            <p>Clique aqui para ativar a IA recomendadora →</p>
+            <div id="iaOutput" class="ia-output">Sugestão: Alface + milho + banana (saf inicial)</div>
+          </div>
+        </div>
+        <div class="ia-buttons">
+          <button class="btn-outline" id="customizeIA">🌱 Personalizar (Bioma Mata Atlântica)</button>
+        </div>
+        <p class="last-update"><i class="fas fa-sync-alt"></i> Última atualização: Base Embrapa • Março 2025</p>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <div class="container footer-inner">
+        <div><i class="fas fa-tree"></i> Sistemas Agroflorestais — SAF</div>
+        <div>Fonte: <a href="https://www.embrapa.br/codigo-florestal/sistemas-agroflorestais-safs" target="_blank">Embrapa</a> • Conteúdo aberto para regeneração.</div>
+        <div class="social-links"><i class="fab fa-whatsapp"></i> <i class="fab fa-instagram"></i> <i class="fab fa-youtube"></i></div>
+      </div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
